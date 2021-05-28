@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import font as tkFont
 import subprocess
 
+
 # Find the light hardware ID and replace ut below
 DEVICE_ID = "USB\VID_05AC&PID_024F&REV_0124"
 
