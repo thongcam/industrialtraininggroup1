@@ -1,0 +1,48 @@
+SET UP INSTRUCTION
+
+
+1. Client
+
+- Download the code to the machine by running "git clone https://github.com/thongcam/industrialtraininggroup1.git" in terminal. Install git if asked and run the command again. Otherwise you can also download the code at https://github.com/thongcam/industrialtraininggroup1
+
+- Python 3 and PIP are likely to be already installed. If not search online for instructions to install them.
+
+- Follow instructions here https://github.com/mvp/uhubctl to install uhubctl.
+
+- Run "pip install python-socketio[client]" in terminal
+
+- Open new-nuc.py with IDLE (or any other available code editor). Copy the code for turning on and off the USB device to the respective functions in new-nuc.py. 
+
+- Change the IP_ADDRESS variable to the IP address of the server.
+
+- If the Raspberry Pi is the model 4B, comment out the first COMMAND variable and uncomment the second COMMAND variable.
+
+- Save the file.
+
+2. Server
+
+- Download the code like above.
+
+- Install Python 3 and PIP.
+
+- Run "pip install aiohttp python-socketio" in terminal.
+
+- Open external.html. Scroll down to the bottom and change the variable IP_ADDRESS to the IP address of the server. Save the file.
+
+
+3. Operation
+
+- Server: In the terminal navigate to the directory of the code. Run "python3 server.py"
+
+- Client: In the terminal navigate to the directory of the code. Run "sudo python3 new-nuc.py"
+
+- On another device in the network, open http://{IP_ADDRESS}:8080/control in the browser (ex: http://192.168.1.12:8080/control)
+
+- Control the light by the toggle switch on the browser.
+
+***NOTICE***
+
+If the terminals of the client and server print "Turning light ON (OFF)" and "...: ON (OFF)" then the code is good.
+
+If the light control still doesn't work, try to plug the light into the other ports.
+
