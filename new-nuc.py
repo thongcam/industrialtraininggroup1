@@ -1,18 +1,18 @@
-from typing_extensions import ParamSpecKwargs
 import socketio
 import subprocess
 
 
 IP_ADDRESS = "192.168.1.12"
 DEVICE_ID = "USB\VID_05AC&PID_024F&REV_0124"
+COMMAND = "uhubctl -l 1-1 -p 2 -a "
 
 
 def turnLightOn():
-    pass
+    subprocess.call(["sudo", COMMAND+"1"])
 
 
 def turnLightOff():
-    pass
+    subprocess.call(["sudo", COMMAND+"0"])
 
 
 sio = socketio.Client()
