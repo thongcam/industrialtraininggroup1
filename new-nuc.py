@@ -25,11 +25,13 @@ sio.connect(f"http://{IP_ADDRESS}:8080/nuc")
 @sio.event
 def connect():
     print("Connected to server")
+    turnLightOn()
 
 
 @sio.event
 def disconnect():
     print("Disconnected from server")
+    turnLightOff()
 
 
 @sio.on("control signal")
