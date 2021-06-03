@@ -10,12 +10,12 @@ COMMAND = "uhubctl -l 1-1 -p 2 -a "
 
 def turnLightOn():
     print("Turning light ON")
-    # returnObject = subprocess.run(["./devcon.exe", "rescan"])
+    returnObject = subprocess.run(["./devcon.exe", "rescan"])
 
 
 def turnLightOff():
     print("Turning light OFF")
-    # returnObject = subprocess.run(["./devcon.exe", "remove", DEVICE_ID])
+    returnObject = subprocess.run(["./devcon.exe", "remove", DEVICE_ID])
 
 
 sio = socketio.Client()
