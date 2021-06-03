@@ -79,7 +79,7 @@
 <script src="https://cdn.socket.io/4.1.1/socket.io.min.js" integrity="sha384-cdrFIqe3RasCMNE0jeFG9xJHog/tgOVC1E9Lzve8LQN1g5WUHo0Kvk1mawWjxX7a" crossorigin="anonymous"></script>
 
 <script>
-    IP_ADDRESS = "192.168.1.12"
+    IP_ADDRESS = "172.16.0.1"
     const socket = io(`http://${IP_ADDRESS}:8080/external`);
     const lightSwitch = document.getElementById("switch")
     lightSwitch.addEventListener("click", (event) => {
